@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Odd or Even ?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+  <body id="Overall">
+<div id="Answer">
+  <h1 id="AnswerBox"></h1>
+</div>
+<div id="full_box">
+<h1>Enter Your Number !</h1>
+<form action="output.html">
+  
+  <input id="number" type="text" name="" placeholder="Enter Number : "><br><br>
+  <input id="submit" type="button" name="" value="Submit" onclick="outputForm();">
+  
+</form>  
+</div>
+
+<script>
+  function outputForm()
+  {
+    var num=document.getElementById("number").value;
+    alert("You have Entered : "+num);
+    checkValue(num); 
+  }
+  function checkValue(my_final_num)
+  { 
+    if (my_final_num%2==1) 
+      {
+        alert(my_final_num+" is ODD !");
+        document.getElementById("AnswerBox").innerHTML=my_final_num +" is ODD !";
+      }
+    else
+      {
+        alert(my_final_num+" is EVEN !");
+        document.getElementById("AnswerBox").innerHTML=my_final_num +" is EVEN !";
+      
+      }
+  }
+ </script>  
+
+  </body>
+</html>
